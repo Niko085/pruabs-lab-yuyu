@@ -22,15 +22,10 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: vehiculos-service
-          uri: lb://vehiculos-service:8090
+          uri: lb://vehiculos-service:8091
           predicates:
             - Path=/automoviles/**
-
-        - id: reparaciones-vehiculos-service
-          uri: lb://reparaciones-vehiculos-service:8091
-          predicates:
-            - Path=/historialreparaciones/**
-
+            
         - id: valor-reparaciones-service
           uri: lb://valor-reparaciones-service:8092
           predicates:
